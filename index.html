@@ -1,0 +1,51 @@
+<!Doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="">
+        <!-- mobile settings -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Title will be here</title>
+        <!--Web font css-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900" rel="stylesheet" type="text/css">
+        <!--Bootstrap CSS-->
+        <link href="assets/css/bootstrap.css" rel="stylesheet">
+        <!--Custom CSS-->
+        <link href="assets/css/master.css" rel="stylesheet">
+        <!--Icon font css-->
+        <link href="assets/css/font-awesome.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.min.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+        <![endif]-->
+		<link rel = "stylesheet" href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css">
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<!-- Script for datepicker -->
+		<script>
+			$(function() 
+			{
+				$(".date").datepicker({
+					onSelect: function(dateText) 
+					{
+						display("Selected date: " + dateText);
+						$(this).change();
+					}
+					})
+				function display(msg) {
+				$("<p>").html(msg).appendTo(document.body);
+				}
+			});
+  
+		</script>
+	</head>
+	<!-- Date change display -->
+	<body>
+		<h3>Select a date</h3>
+		 <b>Date :</b><input type='text' class='date' id="datepicker">
+		
+	</body>
+</html>
